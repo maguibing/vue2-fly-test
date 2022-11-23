@@ -2,11 +2,11 @@
   <div class="login">
     <div class="login-form">
       <h1>Welcome Music</h1>
-      <form method="post">
+      <div class="form">
         <input type="text" name="username" placeholder="Username" v-model="dataForm.phone" />
         <input type="password" name="password" placeholder="Password" v-model="dataForm.password" />
-        <button type="submit" class="btn btn-primary btn-block btn-large" @click="dataFormSubmit">Let me in</button>
-      </form>
+        <button class="btn btn-primary btn-block btn-large" @click="dataFormSubmit">Let me in</button>
+      </div>
     </div>
   </div>
 </template>
