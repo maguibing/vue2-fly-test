@@ -1,3 +1,7 @@
+.home {
+  word-break: break-all;
+}
+
 .home .slide-wrap {
   width: 200px;
   height: 200px;

@@ -5,14 +5,17 @@ import App from './App'
 import router from './router'
 import 'normalize.css'
 
-import axios from 'axios'
-axios.defaults.baseURL = 'http://101.43.125.220:3000/'
+import axios from '@/utils/http.js'
 
 Vue.prototype.$axios = axios
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 import 'swiper/dist/css/swiper.css' 
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
