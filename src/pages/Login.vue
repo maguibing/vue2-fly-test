@@ -29,7 +29,8 @@ export default {
     async dataFormSubmit () {
       if (!this.dataForm.phone || !this.dataForm.password) return
       const res = await login(this.dataForm)
-      console.log(res);
+      this.$store.commit("login/setUserProfile", res.data)
+      this.$router.push("/")
     }
   }
 }

@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Login from '@/components/Login'
+import Home from '@/pages/Home'
+import Login from '@/pages/Login'
 
 Vue.use(Router)
 
 export default new Router({
-    mode:"history",
+    // mode:"history",
     routes: [
         {
         path: '/',

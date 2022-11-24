@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    首页
+    <router-link to="/login">去往登录页</router-link>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
         { url: require('../assets/images/wenwu2.png') },
       ]
     }
-  },
+  }
 }
 </script>
 
