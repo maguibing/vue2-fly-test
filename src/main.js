@@ -6,14 +6,16 @@ import App from './App'
 import router from './router'
 import store from './store'
 import 'normalize.css'
-
+import _ from 'lodash'
 import axios from '@/utils/http.js'
-
+import dayjs from 'dayjs'
 Vue.prototype.$axios = axios
 Vue.prototype.$store = store
+Vue.prototype.$_ = _
+Vue.prototype.$dayjs = dayjs
 
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-Vue.use(VueAwesomeSwiper)
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
+// Vue.use(VueAwesomeSwiper)
 import 'swiper/dist/css/swiper.css' 
 
 import ElementUI from 'element-ui';
