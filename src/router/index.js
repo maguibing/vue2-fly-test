@@ -5,6 +5,7 @@ import Login from '@/pages/Login'
 import Swiper from '@/pages/Swiper'
 import VueSeamlessScroll from '@/pages/VueSeamlessScroll'
 import Wangeditor from '@/pages/Wangeditor'
+import NotFound from '@/pages/404'
 
 Vue.use(Router)
 
@@ -50,6 +51,14 @@ const router = new Router({
                 title:"登陆"
             },
             component: Login,
+        },
+        {
+            path: '*',
+            name: 'NotFound',
+            meta:{
+                title:"未找到资源"
+            },
+            component: NotFound,
         },
     ],
 })
