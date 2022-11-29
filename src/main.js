@@ -17,6 +17,9 @@ Vue.prototype.$dayjs = dayjs
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 // Vue.use(VueAwesomeSwiper)
 import 'swiper/dist/css/swiper.css' 
+// 动态标题  路由出口需要：v-wechat-title='$route.meta.title'
+import VueWechatTitle from 'vue-wechat-title'
+Vue.use(VueWechatTitle)
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

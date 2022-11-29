@@ -8,33 +8,56 @@ import Wangeditor from '@/pages/Wangeditor'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     mode:"history",
     routes: [
         {
             path: '/',
             name: 'Home',
+            meta:{
+                title:"首页"
+            },
             component: Home,
         },  
         {
             path: '/swiper',
             name: 'Swiper',
+            meta:{
+                title:"轮播图"
+            },
             component: Swiper,
         },
         {
             path: '/seamscroll',
             name: 'VueSeamlessScroll',
+            meta:{
+                title:"无限滚动"
+            },
             component: VueSeamlessScroll,
         },
         {
             path: '/wangeditor',
             name: 'Wangeditor',
+            meta:{
+                title:"富文本编辑器"
+            },
             component: Wangeditor,
         },
         {
             path: '/login',
             name: 'Login',
+            meta:{
+                title:"登陆"
+            },
             component: Login,
         },
     ],
 })
+
+// router.beforeEach(async(to, from, next) => {
+//     const title = (to.meta.title ? to.meta.title : '')
+//     document.title = title
+//     next()
+// })
+
+export default router
