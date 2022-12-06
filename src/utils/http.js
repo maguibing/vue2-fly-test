@@ -3,8 +3,10 @@ import ElementUI from "element-ui";
 
 
 const http = axios.create({
-    baseURL: 'http://101.43.125.220:3000/',
+    // baseURL: 'http://101.43.125.220:3000/',
+    baseURL: 'http://192.168.120.92:8107',
     timeout: 1000,
+    
 })
 
 // 添加请求拦截器
