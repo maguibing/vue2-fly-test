@@ -16,9 +16,8 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 import { getFileSha1 } from '../assets/js/Sha1'
-import { policy } from '../apis/policy'
+import { policy, policy1 } from '../apis/policy'
 export default {
   name: 'singleUpload',
   props: {
@@ -85,11 +84,11 @@ export default {
       let _self = this
       const fileSha1 = await getFileSha1(file)
       return new Promise((resolve, reject) => {
-        policy({ fileName: file.name, fileSize: file.size, fileSha1: fileSha1 }).then(response => {
+        policy1({ fileName: file.name, fileSize: file.size, fileSha1: fileSha1 }).then(response => {
           _self.dataObj.policy = response.data.data.policy
           _self.dataObj.signature = response.data.data.signature
           _self.dataObj.ossaccessKeyId = response.data.data.accessid
-          _self.dataObj.key = response.data.data.dir + file.name
+          _self.dataObj.key = response.data.data.dir + response.data.data.name
           _self.dataObj.dir = response.data.data.dir
           _self.dataObj.host = response.data.data.host
           resolve(true)
